@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi there</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% for booking in bookings %}
+        <h1><a href="{% url 'store-post' slug=booking.slug %}">{{ booking.title }}</a></h1>
+    {% endfor %}
+</html>
