@@ -1,0 +1,40 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+
+
+{% block branding %}
+
+    <h1>Mon super store</h1>
+
+{% endblock %}
+
+{% block extrastyle %}
+
+<style>
+
+    #header{
+        background-color: #1e1e2d;
+    }
+
+    #branding{
+        color: white;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        font-weight: bold;
+    }
+
+    body{
+        background-color: #3b3b4c;
+    }
+
+    #content h1{
+        color: white;
+    }
+
+    #content{
+        border-radius: 10px;
+    }
+
+</style>
+
+{% endblock %}

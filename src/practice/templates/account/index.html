@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{title}}</h1>
+
+{% block content %}    
+
+
+<a href="{% url 'store' %}"> Click ici mon ami </a>
+
+{% for post in article %}
+    <a href="{% url 'store' slug=post.slug %}">
+        <h3> {{post.title}} </h3>
+    </a>
+
+    <p> {{post.content|truncatewords:20|striptags|safe}} </p>
+
+{% endfor %}    
+
+
+{% endblock %}    
+
+
+
+
+</body>
+</html>

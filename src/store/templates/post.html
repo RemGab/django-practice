@@ -6,9 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Ici ce sont les books</h1>
-    <p> Le book ici est le {{ booking.title|title }}</p>
-    <p> Sont auteur est : {{booking.auteur}}</p>
-    <h2> {{ booking.content }}</h2>
+    
+    <h1> Créer un article </h1>
+<form method="POST">
+    <table>
+        {% csrf_token%}
+        {{ form.as_table}}
+        <input type="submit" value="Créer">
+    </table>
+</form>
+
+
 </body>
 </html>
